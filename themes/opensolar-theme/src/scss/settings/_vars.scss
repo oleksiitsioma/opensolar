@@ -1,0 +1,30 @@
+// GRID
+
+$containerMaxWidth: 1640px;
+$containerGutter:   20px;
+
+// COLORS
+
+$themeBlack:    #050508;
+$white:         #FFFFFF;
+$yellow:        #FCD50B;
+$gray:          #2F2E2E;
+$darkGray:      #242323;
+$lightGray:     #4D4D4D;
+$lighterGray:   #FAFAFA;
+$blue:          #0095FF;
+
+
+// MEDIA BREAKPOINTS
+
+$phoneWidthMax: 768px;
+$tabletWidthMax: 1199px;
+$tabletWidthMin: $phoneWidthMax + 1;
+$desktopWidthMin:$darkGray $tabletWidthMax + 1;
+
+
+// ANIMATIONS
+
+@mixin standard-transition {
+    transition: all 0.3s ease;
+}

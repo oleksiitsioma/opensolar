@@ -1,0 +1,70 @@
+.container{
+    width: 100%;
+    padding-left: $containerGutter;
+    padding-right: $containerGutter;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $containerMaxWidth;
+    position: relative;
+}
+
+.colGr{
+
+    @mixin column-grid{
+
+        display: grid;
+        column-gap: $containerGutter;
+        row-gap: $containerGutter;
+    }
+
+    @include column-grid();
+    grid-template-columns: repeat(12, 1fr);
+
+    &_5{
+
+        @include column-grid();
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    &__col{
+
+        @mixin column-grid-column{
+            grid-column-start: auto;
+        }
+
+        @for $i from 1 through 12{
+
+            &_#{$i}{
+
+                @include column-grid-column();
+
+                grid-column-end: span #{$i};
+                
+            }
+
+        }
+
+        &_r-al{
+            display: flex;
+            justify-content: flex-end;
+        }
+
+    }
+
+}
+
+
+@media screen and (max-width: $phoneWidthMax) {
+
+    .colGr{
+
+        display: block;
+
+        &_5{
+
+            display: block;
+
+        }
+    }
+
+}

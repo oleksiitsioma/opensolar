@@ -1,0 +1,14 @@
+.wp-block[data-type="core/widget-area"]{
+
+    width: 100%;
+    max-width: 1500px;
+
+    .wp-block-widget-area__inner-blocks{
+        max-width: 100%;
+    }
+
+}
+
+@import './scss/settings/vars';
+
+@import './scss/components/globalStyles';

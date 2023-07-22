@@ -1,0 +1,18 @@
+// SETTINGS
+
+@import './scss/settings/styleReset';
+@import './scss/settings/vars';
+@import './scss/settings/grid';
+@import './scss/settings/fonts';
+@import './scss/settings/typography';
+@import './scss/settings/ui';
+
+
+// COMPONENTS
+
+@import './scss/components/postContent';
+@import './scss/components/header';
+@import './scss/components/footer';
+@import './scss/components/globalStyles';
+@import './scss/components/archive';
+@import './scss/components/postTile';

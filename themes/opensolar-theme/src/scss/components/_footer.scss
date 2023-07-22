@@ -1,0 +1,171 @@
+.footer{
+
+    background-color: $gray;
+    padding: 90px 0 100px;
+
+    &__logo{
+
+        img{
+            width: 190px;
+        }
+
+    }
+
+    @mixin footer-text{
+        color: $white;
+        text-decoration: none;
+        line-height: 1.875rem;
+    }
+
+    @mixin footer-text-small{
+        
+        color: $white;
+        font-size: 0.875rem;
+        margin-bottom: 7px;
+
+        a{
+            color: inherit;
+        }
+    }
+
+    &Widget{
+
+        &:not(:first-child){
+            margin-top: 20px;
+        }
+
+        &__title{
+            color: $white;
+            font-size: 0.875rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        &__text{
+
+            @include footer-text();
+
+            &_small{
+
+                @include footer-text-small();
+
+            }
+
+            a{
+                color: inherit;
+            }
+
+        }
+
+        &__menu{
+
+            list-style: none;
+
+            .menu-item{
+
+                a{
+                    @include footer-text();
+                }
+            }
+        }
+    }
+
+    &__bottom{
+
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding-top: 100px;
+
+        .footerWidget__text{
+
+            padding-left: 30px;
+
+            &:not(:last-child){
+
+                padding-right: 30px;
+                position: relative;
+
+                &::after{
+
+                    content: "";
+                    right: 0;
+                    top: calc(50% - 20px);
+                    height: 40px;
+                    width: 2px;
+                    background-color: transparentize($color: $white, $amount: 0.3);
+                    display: block;
+                    position: absolute;
+                    
+                }
+
+            }
+
+            a{
+
+                text-decoration: underline;
+
+            }
+        }
+    }
+}
+
+.aboveFooter{
+    margin-top: 80px;
+}
+
+@media screen and (max-width: $phoneWidthMax){
+
+    .footer{
+
+        & &Widget{
+            
+            margin-bottom: 50px;
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &_login{
+
+                flex-direction: row;
+                justify-content: center;
+                margin-top: -40px;
+
+                .footerWidget__text_small{
+                    &:not(:last-child){
+                        margin-right: 20px;
+                    }
+                }
+            }
+
+            &__text,
+            &__menu{
+                text-align: center;
+            }
+
+        }
+
+        &__bottom{
+
+            display: block;
+
+            .footerWidget__text{
+
+                padding-left: 0;
+                padding-right: 0;
+                margin-bottom: 10px;
+
+                &:not(:last-child){
+
+                    padding-left: 0;
+                    padding-right: 0;
+
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

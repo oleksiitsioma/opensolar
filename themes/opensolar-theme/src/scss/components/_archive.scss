@@ -1,0 +1,36 @@
+.archive{
+
+    &__title{
+        font-size: 3.5rem;
+        color: $themeBlack;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    &__pagination{
+
+        .nav-links{
+            display: flex;
+            justify-content: center;
+        }
+
+        .page-numbers{
+
+            margin-left: 12px;
+            margin-right: 12px;
+            color: $themeBlack;
+
+            &.current{
+                color: $blue;
+            }
+
+            &:hover{
+                color: $blue;
+                opacity: 1;
+            }
+        }
+    }
+
+}

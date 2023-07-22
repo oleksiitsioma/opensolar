@@ -1,0 +1,39 @@
+#---------------------------
+# Themes
+#---------------------------
+# Ignore all themes
+/themes/*
+# Except this one theme
+!/themes/opensolar-theme
+
+#---------------------------
+# Plugins
+# Check out WPE's Smart
+# Plugin Manager (SMP)
+#---------------------------
+# Ignore all plugins
+/plugins/*
+# Except this one plugin
+
+#---------------------------
+# MU plugins: these are
+# managed by the platform.
+#---------------------------
+/mu-plugins/
+
+#---------------------------
+# Uploads directory
+#---------------------------
+/uploads/
+
+#---------------------------
+# Upgrade files
+#---------------------------
+/upgrade/
+
+
+#---------------------------
+# Node modules
+#---------------------------
+
+node_modules
