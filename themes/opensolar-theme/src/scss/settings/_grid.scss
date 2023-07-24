@@ -1,4 +1,5 @@
 .container{
+
     width: 100%;
     padding-left: $containerGutter;
     padding-right: $containerGutter;
@@ -6,6 +7,11 @@
     margin-right: auto;
     max-width: $containerMaxWidth;
     position: relative;
+
+    &_small{
+        width: 980px;
+    }
+
 }
 
 // Column Grid

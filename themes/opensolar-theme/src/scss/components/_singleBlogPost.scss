@@ -1,0 +1,137 @@
+.singleBlogPost{
+
+    border: 1px solid transparentize($color: $lightGray, $amount: 0.6);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    & .blogMeta{
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: var(--wp--preset--font-size--small);
+        margin-bottom: 30px;
+
+        & > *{
+
+            &:not(:last-child){
+
+                position: relative;
+                margin-right: 9px;
+                padding-right: 10px;
+
+                &:after{
+
+                    content: "";
+                    display: block;
+                    width: 2px;
+                    height: 2px;
+                    background-color: $themeBlack;
+                    border-radius: 50%;
+                    position: absolute;
+                    right: 0;
+                    top: calc(50% - 1px);
+
+                }
+
+            }
+
+        }
+
+        &__userpic{
+
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: $lighterGray;
+
+            &:after{
+                display: none;
+            }
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        }
+
+        &__userName{
+            color: $themeBlack;
+        }
+        
+        &__share{
+            width: 20px;
+            height: 20px;
+            border: none;
+            background: transparent;
+            background-image: url('./img/share.svg');
+            background-size: contain;
+            cursor: pointer;
+            position: absolute;
+            right: 0;
+            top: calc(50% - 10px);
+        }
+
+    }
+
+    &__header{
+        position: relative;
+    }
+
+    & .blogContent{
+
+        &__title{
+            font-size: 2.5rem;
+            color: $themeBlack;
+            margin-bottom: 30px;
+        }
+
+        .postContent{
+
+            padding-bottom: 80px;
+
+            p, ul, ol{
+                font-size: var(--wp--preset--font-size--large);
+                line-height: 1.5;
+            }
+
+            ul, ol{
+
+                padding-left: 55px;
+
+                li{
+                    margin-bottom: 10px;
+                }
+
+            }
+
+            .wp-block-image{
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+
+        }
+
+
+    }
+
+    .blogPost{
+
+        &__social{
+            border-top: 1px solid transparentize($color: $lightGray, $amount: 0.6);
+            border-bottom: 1px solid transparentize($color: $lightGray, $amount: 0.6);
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+    }
+
+
+}

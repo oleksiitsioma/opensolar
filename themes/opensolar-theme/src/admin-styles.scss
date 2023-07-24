@@ -9,6 +9,20 @@
 
 }
 
+.wp-admin{
+
+    &.post-type-post{
+
+        .edit-post-visual-editor{
+            width: 740px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+
+}
+
 @import './scss/settings/vars';
 
 @import './scss/components/globalStyles';
