@@ -16,7 +16,7 @@ $author = $author[0];
         <header class="singleBlogPost__header">
             <div class="blogMeta">
                 <a
-                    href="<?php echo get_term_link( (int) $author->term_id, $taxonomy = 'authors' ); ?>" class="blogMeta__userpic"
+                    href="<?php // echo get_term_link( (int) $author->term_id, $taxonomy = 'authors' ); ?>" class="blogMeta__userpic"
                 >
 
                 <?php 
@@ -26,7 +26,7 @@ $author = $author[0];
                 <?php endif; ?>
 
                 </a>
-                <a href="<?php echo get_term_link( (int) $author->term_id, $taxonomy = 'authors' ); ?>" class="blogMeta__userName"><?php echo $author->name; ?></a>
+                <a href="<?php // echo get_term_link( (int) $author->term_id, $taxonomy = 'authors' ); ?>" class="blogMeta__userName"><?php echo $author->name; ?></a>
                 <time class="blogMeta__date"><?php the_time('F j, Y'); ?></time>
                 <!-- <p class="blogMeta__size" id="blogpost-share" >5 minut read</p> -->
             </div>
