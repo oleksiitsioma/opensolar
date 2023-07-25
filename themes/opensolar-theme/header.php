@@ -23,9 +23,19 @@
                         'container_class'   => 'headerWidget'
                     ]);
                     
-                    dynamic_sidebar( 'sidebar-header-utility' );                
+                    dynamic_sidebar( 'sidebar-header-buttons' );                
                 
                 ?>
+            </div>
+            <div class="header__utility">
+                <button class="header__searchToggle" id="header-search-toggle"></button>
+                <div class="languageSwitcher">
+                    <ul class="languageSwitcher__list">
+                        <?php pll_the_languages([
+                            'display_names_as'  => 'slug',
+                        ]); ?>
+                    </ul>
+                </div>
             </div>
             <button class="header__menuToggle">
                 <span></span><span></span><span></span>

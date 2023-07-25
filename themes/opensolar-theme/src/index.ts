@@ -4,6 +4,8 @@ import './style.scss';
 
 import './js/components/header.ts';
 
+import './js/components/languageSwitcher.ts';
+
 const blogpostShareButton = $('#blogpost-share');
 
 $(blogpostShareButton).on('click' , () => {

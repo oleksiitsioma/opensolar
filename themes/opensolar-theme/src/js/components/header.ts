@@ -15,3 +15,10 @@ const menuOpener = ( ) => {
 }
 
 $(menuToggle).on('click' , menuOpener );
+
+
+const headerSearchToggle = $('#header-search-toggle');
+
+$(headerSearchToggle).on('click' , () =>{
+    console.log( 'header search' );
+})
