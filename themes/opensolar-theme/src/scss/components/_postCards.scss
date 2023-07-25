@@ -1,0 +1,71 @@
+.postCards{
+
+    margin-top: 20px;
+    margin-bottom: 35px;
+    column-gap: 35px;
+    row-gap: 35px;
+    width: var(--wp--preset--width--contentSize);
+
+    &__grid{
+        column-gap: 35px;
+    }
+
+    & .postCard{
+
+        border: 1px solid transparentize($color: $lightGray, $amount: 0.6);
+
+        &__thumbnail{
+
+            width: 100%;
+            height: 160px;
+            display: block;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        }
+
+        &__content{
+            padding: 24px;
+        }
+
+        &__title{
+
+            font-size: var(--wp--preset--font-size--large);
+            color: $themeBlack;
+            font-weight: 700;
+            border-bottom: 1px solid transparentize($color: $lightGray, $amount: 0.6);
+            display: block;
+            padding-bottom: 16px;
+            line-height: 25px;
+            max-height: 66px;
+            overflow: hidden;
+            position: relative;
+
+            &::after{
+                content: '';
+                width: 100%;
+                height: 16px;
+                position: absolute;
+                bottom: 0;
+                background-color: white;
+                left: 0;
+            }
+
+        }
+
+        &:hover{
+
+            .recentPost{
+
+                &__title{
+
+                    color: $yellow;
+                }
+            }
+        }
+    }
+}
