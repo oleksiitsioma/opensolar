@@ -30,4 +30,17 @@ function ___twf_register_sidebars(){
         'after_sidebar'  => '</section>'
 	) );
 
+	register_sidebar( array(
+		'name'          => 'Footer',
+		'id'            => "sidebar-footer",
+		'description'   => '',
+		'class'         => '',
+		'before_widget' => '',
+		'after_widget'  => "",
+		'before_title'  => "",
+		'after_title'   => "",
+		'before_sidebar' => '<footer class="footer">',
+        'after_sidebar'  => '</section>'
+	) );
+
 }

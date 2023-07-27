@@ -1,4 +1,5 @@
 <?php dynamic_sidebar( 'sidebar-above-footer' ); ?>
+<?php dynamic_sidebar( 'sidebar-footer' ); ?>
 
 <footer class="footer">
     <div class="container colGr">
