@@ -2,6 +2,8 @@ import $ from 'jquery';
 
 import './style.scss';
 
+import './js/settings/vars.ts';
+
 import './js/components/header.ts';
 
 import './js/components/languageSwitcher.ts';

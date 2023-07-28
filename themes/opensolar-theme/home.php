@@ -1,25 +1,14 @@
-<div class="recentPosts postCards">
+<?php get_header(); ?>
 
-    <div class="recentPosts__header">
-        <h2 class="recentPosts__title">Recent Posts</h2>
-        <a href="<?php echo the_permalink( get_option('page_for_posts') ); ?>" class="recentPosts__linkToAll">See all</a>
-    </div>
-    
+<div class="container">
 
-    <div class="recentPosts__grid colGr">
+    <h1 class="archive__title">Blog</h1>
 
-        <?php 
+    <?php if(have_posts()) : ?>
 
-            $queryArgs = array(
-                'posts_per_page'    => 3,
-                'post__not_in'      => [ get_the_ID() ],
-            );
+    <div class="colGr postCards">
 
-            $query = new WP_Query( $queryArgs );
-
-            if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post();
-
-        ?>
+        <?php while(have_posts()) : the_post(); ?>
 
             <div class="colGr__col_4 postCard">
                 <a href="<?php the_permalink(); ?>" class="postCard__thumbnail">
@@ -45,8 +34,18 @@
                 </div>
             </div>
 
-        <?php endwhile; wp_reset_postdata(); endif; ?>
+        <?php endwhile; endif; ?>
 
     </div>
 
+    <div class="archive__pagination">
+        <?php the_posts_pagination( ); ?>
+    </div>
+
 </div>
+
+
+
+
+
+<?php get_footer(); ?>

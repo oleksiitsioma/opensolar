@@ -19,7 +19,7 @@
 
                     wp_nav_menu([
                         'theme_location'    => 'header-primary',
-                        'menu_class'        => 'headerWidget__menu headerWidget__menu_main',
+                        'menu_class'        => 'headerWidget__menu',
                         'container_class'   => 'headerWidget'
                     ]);
                     
@@ -28,7 +28,7 @@
                 ?>
             </div>
             <div class="header__utility">
-                <button class="header__searchToggle" id="header-search-toggle"></button>
+                <button class="header__searchToggle"></button>
                 <div class="languageSwitcher">
                     <ul class="languageSwitcher__list">
                         <?php pll_the_languages([
@@ -37,6 +37,7 @@
                     </ul>
                 </div>
             </div>
+            <button class="header__searchToggle header__searchToggle_mobile"></button>
             <button class="header__menuToggle">
                 <span></span><span></span><span></span>
             </button>

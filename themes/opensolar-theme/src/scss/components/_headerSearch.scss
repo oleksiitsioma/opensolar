@@ -1,0 +1,37 @@
+.header__searchToggle{
+
+    display: block;
+    width: 26px;
+    height: 26px;
+    border: none;
+    background: none;
+    background-image: url('./img/001-magnifying-glass.svg');
+    background-position: center;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-right: 30px;
+
+    &_mobile{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: $phoneWidthMax) {
+
+    .header__searchToggle{
+        
+        display: none;
+
+        &_mobile{
+            display: block;
+            position: absolute;
+            top: 12px;
+            right: 70px;
+            margin: 0;
+        }
+        
+    }
+    
+}
