@@ -83,6 +83,8 @@
                     .menu-item{
 
                         text-align: center;
+                        margin-left: auto;
+                        margin-right: auto;
 
                         &:not(:last-child){
                             margin-bottom: 10px;
@@ -301,5 +303,5 @@
     .menu-open{
         overflow-y: hidden;
     }
-    
+
 }
