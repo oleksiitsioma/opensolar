@@ -21,10 +21,10 @@ $social-linkedin:   #0077B5;
 
 // MEDIA BREAKPOINTS
 
-$phoneWidthMax: 768px;
-$tabletWidthMax: 1199px;
-$tabletWidthMin: $phoneWidthMax + 1;
-$desktopWidthMin:$darkGray $tabletWidthMax + 1;
+$phoneWidthMax      : 768px;
+$tabletWidthMax     : 1199px;
+$tabletWidthMin     : $phoneWidthMax + 1;
+$desktopWidthMin    : $tabletWidthMax + 1;
 
 
 // ANIMATIONS
