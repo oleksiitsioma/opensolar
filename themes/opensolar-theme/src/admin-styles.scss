@@ -21,6 +21,16 @@
 
     }
 
+    &.post-type-news{
+
+        .edit-post-visual-editor{
+            width: 690px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+
 }
 
 @import './scss/settings/vars';
