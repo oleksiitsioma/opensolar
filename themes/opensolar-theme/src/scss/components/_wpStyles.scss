@@ -16,6 +16,7 @@
 
     &:not(.alignwide),
     &:not(.alignfull){
+        width: 100%;
         max-width: var(--wp--style--global--content-size);
         margin-left: auto;
         margin-right: auto;
