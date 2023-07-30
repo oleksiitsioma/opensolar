@@ -3,24 +3,24 @@
     margin-right: auto;
 }
 
-.postContent .alignwide{
-    padding-left: 20px;
-    padding-right: 20px;
+.postContent > *{
+    
     width: 100%;
-    max-width: var(--wp--style--global--wide-size);
+    max-width: calc( var(--wp--style--global--content-size) + 40px);
     margin-left: auto;
     margin-right: auto;
-}
+    padding-left: 20px;
+    padding-right: 20px;
 
-.postContent > *{
-
-    &:not(.alignwide),
-    &:not(.alignfull){
-        width: 100%;
-        max-width: var(--wp--style--global--content-size);
-        margin-left: auto;
-        margin-right: auto;
+    &.alignwide{
+        max-width: var(--wp--style--global--wide-size);
     }
+
+    &.alignfull{
+        max-width: none;
+    }
+    
+
 }
 
 .postContent .wp-block-embed__wrapper iframe{
