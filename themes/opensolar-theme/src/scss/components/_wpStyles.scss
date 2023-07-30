@@ -8,6 +8,8 @@ body .alignwide{
     padding-right: 20px;
     width: 100%;
     max-width: var(--wp--style--global--wide-size);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .wp-block-embed__wrapper iframe{
