@@ -7,7 +7,7 @@ body .alignwide{
     padding-left: 20px;
     padding-right: 20px;
     width: 100%;
-    max-width: --wp--style--global--wide-size;
+    max-width: var(--wp--style--global--wide-size);
 }
 
 .wp-block-embed__wrapper iframe{
