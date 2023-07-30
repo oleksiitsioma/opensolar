@@ -1,9 +1,9 @@
-.aligncenter{
+.postContent .aligncenter{
     margin-left: auto;
     margin-right: auto;
 }
 
-body .alignwide{
+.postContent .alignwide{
     padding-left: 20px;
     padding-right: 20px;
     width: 100%;
@@ -12,6 +12,16 @@ body .alignwide{
     margin-right: auto;
 }
 
-.wp-block-embed__wrapper iframe{
+.postContent > *{
+
+    &:not(.alignwide),
+    &:not(.alignfull){
+        max-width: var(--wp--style--global--content-size);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.postContent .wp-block-embed__wrapper iframe{
     width: 100%;
 }
