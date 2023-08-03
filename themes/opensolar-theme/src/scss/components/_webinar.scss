@@ -1,0 +1,52 @@
+.webinarItem{
+
+    border: 1px solid rgb(232,230,230);
+    padding: 20px 30px;
+
+    &:not(:last-child){
+        margin-bottom: 40px;
+    }
+
+    &:last-child{
+        margin-bottom: 80px;
+    }
+
+    &__header{
+
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 20px;
+        position: relative;
+        left: -10px;
+
+        &Icon{
+            width: 70px;
+            height: 70px;
+        }
+
+        &Title{
+            font-size: 1.5rem;
+        }
+
+    }
+
+}
+
+.webinarRegionHeader{
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &__title{
+
+        text-align: center;
+        font-size: 1.75rem;
+
+        span{
+            display: block;
+            font-weight: 400;
+        }
+    }
+
+}
