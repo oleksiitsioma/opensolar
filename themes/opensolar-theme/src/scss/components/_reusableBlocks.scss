@@ -7,11 +7,19 @@
     }
 }
 
+.feature-cover{
+    height: 450px;
+}
+
 @media screen and (max-width: $phoneWidthMax) {
     
     .breadcrumbs{
         padding-left: 20px!important;
         padding-right: 20px;
+    }
+
+    .feature-cover{
+        height: 200px;
     }
 
 }
