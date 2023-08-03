@@ -11,6 +11,7 @@ require_once( get_template_directory(  ) . '/inc/theme-widgets.php');
 
 require_once( get_template_directory(  ) . '/inc/post-types/cpt-partners.php');
 require_once( get_template_directory(  ) . '/inc/post-types/cpt-news.php');
+require_once( get_template_directory(  ) . '/inc/post-types/cpt-webinars.php');
 
 
 // TAXONOMIES
@@ -19,3 +20,4 @@ require_once( get_template_directory(  ) . '/inc/taxonomies/tax-partners-product
 require_once( get_template_directory(  ) . '/inc/taxonomies/tax-partners-regions.php');
 require_once( get_template_directory(  ) . '/inc/taxonomies/tax-news-tags.php');
 require_once( get_template_directory(  ) . '/inc/taxonomies/tax-posts-authors.php');
+require_once( get_template_directory(  ) . '/inc/taxonomies/tax-webinars-regions.php');
