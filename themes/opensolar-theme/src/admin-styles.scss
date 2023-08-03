@@ -31,6 +31,16 @@
 
     }
 
+    &.post-type-webinars{
+
+        .edit-post-visual-editor{
+            width: 940px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    }
+
 }
 
 @import './scss/settings/vars';
