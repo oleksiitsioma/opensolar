@@ -17,7 +17,7 @@ function ___twf_register_webinars_post_type(){
         'supports'          => [ 'title', 'editor', 'revisions' , 'thumbnail' ], 
 		'taxonomies'        => [ 'webinars-regions' ],
 		'has_archive'       => true,
-		'rewrite'           => true,
+		'rewrite'           => false,
 		'query_var'         => true,
 	] );
 
