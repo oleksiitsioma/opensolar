@@ -12,10 +12,7 @@ function ___twf_register_webinars_regions_taxonomy(){
 		'description'           => '',
         'public'                => true,
         'hierarchical'          => true,
-        'rewrite'               => array(
-            'slug' => '/',
-            'with_front' => false
-        ),
+        'rewrite'               => false,
         'capabilities'          => array(),
         'show_admin_column'     => true,
         'show_in_rest'          => true,
