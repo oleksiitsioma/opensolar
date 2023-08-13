@@ -1,4 +1,3 @@
-<?php dynamic_sidebar( 'sidebar-above-footer' ); ?>
 <?php dynamic_sidebar( 'sidebar-footer' ); ?>
 
 
