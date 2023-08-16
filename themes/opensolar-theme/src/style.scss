@@ -8,6 +8,12 @@
 @import './scss/settings/ui';
 
 
+// VENDOR
+
+@import './scss/vendor/slick';
+@import './scss/vendor/slick-theme';
+
+
 // COMPONENTS
 
 @import './scss/components/postContent';
@@ -25,3 +31,4 @@
 @import './scss/components/wpStyles';
 @import './scss/components/reusableBlocks';
 @import './scss/components/webinar';
+@import './scss/components/carousels';

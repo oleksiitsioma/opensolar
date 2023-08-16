@@ -1,0 +1,31 @@
+
+
+.slick{
+
+    &-arrow{
+
+        content: '';
+
+        &::before{
+            content: '';
+            background-image: url('./img/slider-arrow.svg');
+            height: 40px;
+            width: 40px;
+            display: block;
+            opacity: 1;
+            background-size: contain;
+        }
+
+    }
+
+    &-prev{
+        
+        &::before{
+
+            transform: rotate(180deg);
+
+        }
+        
+    }
+
+}

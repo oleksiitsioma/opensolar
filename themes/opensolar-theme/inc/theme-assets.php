@@ -20,6 +20,8 @@ add_action( 'init', '___twf_enqueue_frontend_scripts' );
 
 function ___twf_enqueue_frontend_scripts() {
 
+    wp_enqueue_script('jquery');
+
     wp_enqueue_script(
         $handle     = 'main',
         $src        = get_template_directory_uri(  ) . '/build/bundle-script.js',
