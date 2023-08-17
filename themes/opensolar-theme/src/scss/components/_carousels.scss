@@ -1,10 +1,9 @@
-
-
 .slick{
 
     &-arrow{
 
         content: '';
+        display: block;
 
         &::before{
             content: '';
