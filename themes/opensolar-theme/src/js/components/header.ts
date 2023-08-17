@@ -50,3 +50,24 @@ $(headerSearchToggle).on('click' , () =>{
     console.log( 'header search' );
 })
 
+const headerUtility = $('.header__utility');
+
+const headerReplacer = () => {
+
+    if( $(window).width() < 2200 ){
+
+        headerUtility.remove();
+        $('.header__menuArea').append( headerUtility );
+
+    } else {
+
+        headerUtility.remove();
+        $('.header__container').append( headerUtility );
+
+    }
+
+}
+
+headerReplacer();
+
+$(window).on( 'resize' , headerReplacer() )

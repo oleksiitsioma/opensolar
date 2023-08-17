@@ -131,8 +131,15 @@
     }
 
     &__menuArea{
+
         display: flex;
         justify-content: flex-end;
+
+        .header__utility{
+            position: relative;
+            left: 0;
+        }
+
     }
 
     &__utility{

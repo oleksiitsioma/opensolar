@@ -13,8 +13,7 @@
                     <?php if( has_custom_logo() ) { the_custom_logo( ); } ?>
                 </div>
             </div>
-            <div class="colGr__col_3"></div>
-            <div class="colGr__col_6 header__menuArea">
+            <div class="colGr__col_9 header__menuArea">
                 <?php 
 
                     wp_nav_menu([
