@@ -9,7 +9,7 @@ function ___twf_theme_supports(){
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'custom-logo', [
 		'height'                => 120,
-		'width'                 => 520,
+		'width'                 => 355,
 		'flex-width'            => false,
 		'flex-height'           => false,
         'unlink-homepage-logo'  => true
