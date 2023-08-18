@@ -11,7 +11,7 @@ function ___twf_register_posts_authors_taxonomy(){
 		],
 		'description'           => '',
         'public'                => true,
-        'hierarchical'          => false,
+        'hierarchical'          => true,
         'rewrite'               => true,
         'capabilities'          => array(),
         'show_admin_column'     => true,
