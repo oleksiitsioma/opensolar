@@ -7,17 +7,17 @@
 </head>
 <body class="frontend">
 
-    <header class="header">
+    <?php dynamic_sidebar( 'sidebar-header' );  ?>
 
-        <?php dynamic_sidebar( 'sidebar-header' );  ?>
+    <!-- <header class="header">
 
         <div class="header__utility">
             <button class="header__searchToggle"></button>
             <div class="languageSwitcher">
                 <ul class="languageSwitcher__list">
-                    <?php pll_the_languages([
-                        'display_names_as'  => 'slug',
-                    ]); ?>
+                    <?php // pll_the_languages([
+                        // 'display_names_as'  => 'slug',
+                    // ]); ?>
                 </ul>
             </div>
         </div>
@@ -26,4 +26,4 @@
             <span></span><span></span><span></span>
         </button>
 
-    </header>
+    </header> -->
