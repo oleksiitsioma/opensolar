@@ -40,11 +40,6 @@
         align-items: center;
         display: flex;
 
-        &:not(:last-child){
-            margin-right: 30px;
-        }
-
-
         &__menu{
 
             list-style: none;
