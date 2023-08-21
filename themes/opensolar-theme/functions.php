@@ -21,3 +21,7 @@ require_once( get_template_directory(  ) . '/inc/taxonomies/tax-partners-regions
 require_once( get_template_directory(  ) . '/inc/taxonomies/tax-news-tags.php');
 require_once( get_template_directory(  ) . '/inc/taxonomies/tax-posts-authors.php');
 require_once( get_template_directory(  ) . '/inc/taxonomies/tax-webinars-regions.php');
+
+// SHORTCODES
+
+require_once( get_template_directory(  ) . '/inc/shortcodes/header-menu.php');
