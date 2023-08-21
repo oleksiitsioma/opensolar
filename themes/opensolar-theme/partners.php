@@ -40,13 +40,13 @@ echo get_template_part( 'template-parts/loop' );
 
     <?php
     
-    $queryArgs = array(
+    $partnersQueryArgs = array(
         'post_type'         => 'partners',
     );
 
-    $query = new WP_Query( $queryArgs );
+    $partnersQuery = new WP_Query( $partnersQueryArgs );
 
-    if( $query->have_posts()) : while( $query->have_posts()) : $query->the_post();
+    if( $partnersQuery->have_posts()) : while( $partnersQuery->have_posts()) : $partnersQuery->the_post();
 
         the_title(  );
         echo '<br>';
