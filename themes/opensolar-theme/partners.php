@@ -12,31 +12,32 @@ echo get_template_part( 'template-parts/loop' );
 
     <?php 
 
-        $productTerms = get_terms([
-            'taxonomy'      => 'partners-products',
-            'hide_empty'    => true
-        ] );
+        // $productTerms = get_terms([
+        //     'taxonomy'      => 'partners-products',
+        //     'hide_empty'    => true
+        // ] );
 
-        if( sizeof( $productTerms) > 0){
+        // if( sizeof( $productTerms) > 0){
 
-            echo '<select name="partners-filter-products">';
-            echo '<option disabled selected>Products</option>';
+        //     echo '<select name="partners-filter-products">';
+        //     echo '<option disabled selected>Products</option>';
 
-            foreach ( $productTerms as $term ){
+        //     foreach ( $productTerms as $term ){
 
-                echo '<option value="' . $term->slug . '">' . $term->name . '</option>';
+        //         echo '<option value="' . $term->slug . '">' . $term->name . '</option>';
 
-            }
+        //     }
 
-            echo '</select>'; 
+        //     echo '</select>'; 
 
-        } 
+        // } 
 
     ?>
 
 </div>
 
 <div class="partnersQuery">
+
     <?php
     
     $queryArgs = array(
@@ -53,6 +54,7 @@ echo get_template_part( 'template-parts/loop' );
     endwhile; wp_reset_postdata(); endif;
     
     ?>
+    
 </div>
 
 
