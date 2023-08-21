@@ -17,8 +17,6 @@
 
     &__container{
 
-        align-items: center;
-        height: 60px;
         position: relative;
 
         .header__utility{
@@ -137,9 +135,6 @@
     }
 
     &__menuArea{
-
-        display: flex;
-        justify-content: flex-end;
 
         .header__utility{
             position: relative;
