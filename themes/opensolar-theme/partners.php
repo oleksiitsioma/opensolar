@@ -19,7 +19,8 @@ endwhile; endif;
     <?php
     
     $partnersQueryArgs = array(
-        'post_type' => 'partners',
+        'post_type'         => 'partners',
+        'posts_per_page'    => -1
     );
 
     $partnersQuery = new WP_Query( $partnersQueryArgs );
