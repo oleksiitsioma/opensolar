@@ -16,6 +16,30 @@ endwhile; endif;
 
 <div class="partnersQuery">
 
+    <div class="partnersQuery__filter">
+
+        <select name="partners-products" id="partners-products-select">
+
+            <option value="all" selected>Show All</option>
+
+            <?php 
+            
+            $productTerms = get_terms( 'partners-products');
+
+            $productTermsStripped = [];
+
+            foreach( $productTerms as $product ){
+                $productTermsStripped[] = $product->name;
+                echo '<option value="' . $product->name . '">' . $product->name . '</option>';
+            }
+
+            ?>
+
+        </select>
+
+
+    </div>
+
     <?php
     
     $partnersQueryArgs = array(
