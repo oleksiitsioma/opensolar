@@ -56,7 +56,15 @@ endwhile; endif;
         >
             <div class="colGr__col_9 partnersQuery__itemContent">
                 <h3 class="partnersQuery__itemText_big"><?php the_title(); ?></h3>
-                <?php the_content(); ?>
+                <?php
+                    the_content();
+                    the_post_thumbnail(
+                        array(360, 240),
+                        array(
+                            'alt'   => get_the_title( get_the_ID() )
+                        )
+                    );
+                ?>
             </div>
             <div class="colGr__col_3 partnersQuery__itemMeta">
                 <div class="partnersQuery__itemMetaBlock">
