@@ -16,7 +16,7 @@ function ___twf_register_partners_post_type(){
         'hierarchical'      => false,
         'supports'          => [ 'title', 'editor', 'thumbnail', 'revisions' ], 
 		'taxonomies'        => [ 'partners-products' , 'partners-regions' ],
-		'has_archive'       => false,
+		'has_archive'       => true,
 		'rewrite'           => true,
 		'query_var'         => true,
 	] );
