@@ -54,7 +54,7 @@ endwhile; endif;
                 } 
             ?>
         >
-            <div class="colGr__col_9">
+            <div class="colGr__col_9 partnersQuery__itemContent">
                 <h3 class="partnersQuery__itemText_big"><?php the_title(); ?></h3>
                 <?php the_content(); ?>
             </div>

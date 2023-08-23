@@ -1,10 +1,9 @@
 .partnersQuery{
 
-    column-gap: 50px;
+    max-width: 930px;
 
     &__item{
         width: 100%;
-        max-width: 930px;
         padding-left: 20px;
         padding-right: 20px;
         margin-left: auto;
@@ -22,6 +21,10 @@
             &_small{
                 font-size: 0.875rem;
             }
+        }
+
+        &Content{
+            padding-right: 100px;
         }
 
         &Meta{
