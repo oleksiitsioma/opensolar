@@ -102,10 +102,10 @@ endwhile; endif;
                 <div class="partnersQuery__itemMetaBlock">
                     <?php 
                         if( get_field( 'website' ) ){
-                            echo '<a class="partnersQuery__itemLink" href="' . the_field( "website") . '">Visit their Website</a>'; 
+                            echo '<a class="partnersQuery__itemText_small partnersQuery__itemLink" href="' . get_field( "website") . '">Visit their Website</a><br>'; 
                         }
                         if( get_field( 'learn_more_url' ) ){
-                            echo '<a class="partnersQuery__itemLink" href="' . the_field( "learn_more_url") . '">Learn more</a>'; 
+                            echo '<a class="partnersQuery__itemText_small partnersQuery__itemLink" href="' . get_field( "learn_more_url") . '">Learn more</a>'; 
                         }
                     ?>
                 </div>

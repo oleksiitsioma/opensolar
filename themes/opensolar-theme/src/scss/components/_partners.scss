@@ -27,6 +27,15 @@
             flex-direction: column;
             justify-content: space-between;
         }
+
+        &Link{
+
+            color: $themeBlack;
+
+            &:hover{
+                color: $blue;
+            }
+        }
     }
 
 }
