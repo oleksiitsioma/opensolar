@@ -21,7 +21,7 @@ function ___twf_register_partners_regions_taxonomy(){
 		],
 		'description'           => '',
         'public'                => true,
-        'hierarchical'          => false,
+        'hierarchical'          => true,
         'rewrite'               => true,
         'capabilities'          => array(),
         'show_admin_column'     => true,
