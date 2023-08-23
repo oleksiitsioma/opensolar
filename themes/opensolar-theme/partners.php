@@ -52,8 +52,8 @@ endwhile; endif;
 
     if( $partnersQuery->have_posts()) : while( $partnersQuery->have_posts()) : $partnersQuery->the_post();
 
-    $regions = get_the_terms('partners_regions'); 
-    $products = get_the_terms('partners_products'); 
+    $regions = get_the_terms( get_the_ID() , 'partners_regions'); 
+    $products = get_the_terms( get_the_ID() , 'partners_products'); 
     
     
     ?>
