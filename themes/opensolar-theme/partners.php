@@ -14,34 +14,6 @@ endwhile; endif;
 
 ?>
 
-<div class="partnersFilter">
-
-    <?php 
-
-        $productTerms = get_terms([
-            'taxonomy'      => 'partners-products',
-            'hide_empty'    => true
-        ] );
-
-        if( sizeof( $productTerms) > 0){
-
-            echo '<select name="partners-filter-products">';
-            echo '<option disabled selected>Products</option>';
-
-            foreach ( $productTerms as $term ){
-
-                echo '<option value="' . $term->slug . '">' . $term->name . '</option>';
-
-            }
-
-            echo '</select>'; 
-
-        } 
-
-    ?>
-
-</div>
-
 <div class="partnersQuery">
 
     <?php
