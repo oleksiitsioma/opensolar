@@ -37,6 +37,8 @@ endwhile; endif;
 
         </select>
 
+        <input type="text" >
+
 
     </div>
 
@@ -70,6 +72,7 @@ endwhile; endif;
 
         <div
             class="partnersQuery__item colGr"
+            id="<?php the_title(); ?>
             <?php
                 if ( sizeof( $regionsStripped ) > 0  ) {
                     echo 'data-regions="' . implode( ', ' , $regionsStripped ) . '"' ; 
