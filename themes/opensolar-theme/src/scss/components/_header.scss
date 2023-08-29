@@ -147,6 +147,10 @@
         top: calc(50% - 25px);
     }
 
+    &__buttons{
+        position: relative;
+    }
+
 }
 
 @media screen and (min-width: $desktopWidthMin) {
