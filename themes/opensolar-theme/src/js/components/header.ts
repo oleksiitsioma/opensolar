@@ -44,17 +44,12 @@ $(menuItemsWithChildren).on('click' , function() {
 })
 
 
-const headerSearchToggle = $('.header__searchToggle');
-
-$(headerSearchToggle).on('click' , () =>{
-    console.log( 'header search' );
-})
 
 const headerUtility = $('.header__utility');
 
 const headerReplacer = () => {
 
-    if( $(window).width() < 2200 ){
+    if( $(window).width() < 2200 && $(window).width() > 768){
 
         headerUtility.remove();
         $('.header__menuArea').append( headerUtility );
@@ -70,4 +65,30 @@ const headerReplacer = () => {
 
 headerReplacer();
 
-$(window).on( 'resize' , headerReplacer )
+$(window).on( 'resize' , headerReplacer );
+
+
+
+
+
+const headerMobileMenuToggle = $('.header__menuToggle');
+$(headerMobileMenuToggle).remove();
+$('.header__container').append(headerMobileMenuToggle);
+$(headerMobileMenuToggle).on('click', () => {
+    console.log( 'menu' );
+})
+
+
+const headerSearchToggle = $('.header__searchToggle_mobile');
+$(headerSearchToggle).remove();
+$('.header__container').append(headerSearchToggle);
+$(headerSearchToggle).on('click', () => {
+    console.log( 'search' );
+})
+
+
+
+
+const headerMainMenu = $('#header-main-menu');
+
+$(headerMainMenu).remove();

@@ -105,8 +105,8 @@
         width: 32px;
         height: 22px;
         border: none;
-        right: $containerGutter;
-        top: 14px;
+        right: 0;
+        top: 0;
         flex-direction: column;
         justify-content: space-between;
         background: transparent;
@@ -132,6 +132,10 @@
         .header__utility{
             position: relative;
             left: 0;
+        }
+
+        p{
+            display: none;
         }
 
     }
@@ -192,12 +196,15 @@
 
         & &__logoArea{
 
-            .custom-logo-link{
-
-                img{
-                    width: 160px;
-                }
+            img{
+                width: 135px!important;
+                height: auto!important;
             }
+
+        }
+
+        &__utility{
+            display: none;
         }
 
         & &Widget{
@@ -302,11 +309,23 @@
         }
 
         &__menuToggle{
-            display: flex;;
+            display: flex;
         }
 
         &__menuArea{
-            justify-content: center;
+
+            justify-content: center!important;
+
+            .header__buttons{
+
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                width: 100%;
+
+                a{
+                    display: block;
+                }
+            }
         }
     }
 
