@@ -70,4 +70,4 @@ const headerReplacer = () => {
 
 headerReplacer();
 
-$(window).on( 'resize' , headerReplacer() )
+$(window).on( 'resize' , headerReplacer )
