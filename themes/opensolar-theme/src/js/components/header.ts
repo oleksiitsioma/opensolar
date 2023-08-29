@@ -2,9 +2,12 @@ import $ from 'jquery';
 
 const header = $('.header');
 const menu = $(header).find('.headerWidget__menu');
-const menuToggle = $(header).find('.header__menuToggle');
+const menuToggle = $('.header__menuToggle');
+console.log(menuToggle)
 const menuMobileOpenClass = 'menu_open';
 const menuToggleOpenClass = 'header__menuToggle_open';
+$(menuToggle).remove();
+$('.header__container').append(menuToggle);
 
 const bodyClassOpenMenu = 'menu-open';
 
@@ -43,6 +46,10 @@ $(menuItemsWithChildren).on('click' , function() {
 
 })
 
+$('.menu-item_open').on( 'click' , () => {
+    $('.menu-item_open').removeClass('.menu-item_open');
+})
+
 
 
 const headerUtility = $('.header__utility');
@@ -68,17 +75,6 @@ headerReplacer();
 $(window).on( 'resize' , headerReplacer );
 
 
-
-
-
-const headerMobileMenuToggle = $('.header__menuToggle');
-$(headerMobileMenuToggle).remove();
-$('.header__container').append(headerMobileMenuToggle);
-$(headerMobileMenuToggle).on('click', () => {
-    console.log( 'menu' );
-})
-
-
 const headerSearchToggle = $('.header__searchToggle_mobile');
 $(headerSearchToggle).remove();
 $('.header__container').append(headerSearchToggle);
@@ -87,8 +83,6 @@ $(headerSearchToggle).on('click', () => {
 })
 
 
+const languageSwitcher = $('.languageSwitcher');
 
-
-const headerMainMenu = $('#header-main-menu');
-
-$(headerMainMenu).remove();
+// $(menu).prepend(languageSwitcher);

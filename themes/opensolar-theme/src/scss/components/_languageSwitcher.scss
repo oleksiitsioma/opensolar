@@ -129,6 +129,8 @@
 @media screen and (max-width: $phoneWidthMax) {
     
     .languageSwitcher{
-        display: none;
+        position: absolute;    
+        top: 12px;
     }
+
 }
