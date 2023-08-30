@@ -36,18 +36,19 @@ endwhile; endif;
                 while( $partnersQuery->have_posts()) : $partnersQuery->the_post(); ?>
                 
                 <div class="colGr__col_1">
-                    <a href="<?php echo '#' . _wp_to_kebab_case( strtolower( get_the_title() ) ) . '-' . get_the_ID();?>">
-                        <div class="partnersClickableBoard__logoWrapper">
-                            <?php
-                                the_post_thumbnail(
-                                    array(130, 300),
-                                    array(
-                                        'class' => 'partnersClickableBoard__logo'
-                                    )
-                                );
-                            ?>
-                        </div>
-                    </a>
+                    <div
+                        class="partnersClickableBoard__logoWrapper"
+                        data-target="<?php echo 'partner-' . get_the_ID();?>"
+                    >
+                        <?php
+                            the_post_thumbnail(
+                                array(130, 300),
+                                array(
+                                    'class' => 'partnersClickableBoard__logo'
+                                )
+                            );
+                        ?>
+                    </div>
                 </div>
 
             <?php endwhile; ?> 
@@ -121,7 +122,7 @@ endwhile; endif;
 
         <div
             class="partnersQuery__item colGr"
-            id="<?php echo _wp_to_kebab_case( strtolower( get_the_title() ) ) . '-' . get_the_ID(); ?>"
+            id="<?php echo 'partner-' . get_the_ID(); ?>"
             <?php
                 if ( $regions ) {
                     echo 'data-regions="' . implode( ', ' , $regionsStripped ) . '"' ; 

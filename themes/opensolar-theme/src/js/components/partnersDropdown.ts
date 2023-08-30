@@ -76,7 +76,7 @@ $(partnerfilterreset).on( 'click' , () => {
 
 // partners pagination
 
-const partnersperpage = 6;
+const partnersperpage = 10;
 
 let showedPosts = partnersperpage;
 
@@ -87,6 +87,16 @@ for (let i = showedPosts; i < products.length; i++) {
     
 }
 
+const scrollPartners = () => {
+
+    $(products).show();
+
+    for (let i = showedPosts; i < products.length; i++) {
+        $(products[i]).hide();   
+    }
+
+}
+
 $(window).on( 'scroll' , () => {
 
     if( $(window).scrollTop() > $(products[showedPosts - 1]).offset().top - $(window).height() ){
@@ -95,12 +105,27 @@ $(window).on( 'scroll' , () => {
             ? showedPosts += partnersperpage
             : showedPosts = $(products).length;
 
-        $(products).show();
+        scrollPartners();
 
-        for (let i = showedPosts; i < products.length; i++) {
-            $(products[i]).hide();   
-        }
 
     }
 
+})
+
+// partners anchoring
+
+const partnerLinks = $('.partnersClickableBoard__logoWrapper');
+
+$(partnerLinks).on( 'click' , function(){
+
+    const target = '#' + $(this).data('target');
+
+    if( $(target).is(':hidden') ){
+        
+        showedPosts = $(products).index( $(target) ) + 3;
+        scrollPartners();
+
+    }
+
+    window.scrollTo( 0, $(target).offset().top )
 })
