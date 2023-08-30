@@ -63,7 +63,7 @@ endwhile; endif;
 
     <div class="partnersQuery__filter">
 
-        <select name="partners-products" id="partners-products-select">
+        <select name="partners-products" id="partners-products-select" class="partnersQuery__input">
 
             <option value="all" selected>Show All</option>
 
@@ -82,9 +82,9 @@ endwhile; endif;
 
         </select>
 
-        <input type="text" name="live-partner-search" id="live-partner-search">
+        <input type="text" name="live-partner-search" id="live-partner-search" class="partnersQuery__input">
 
-        <button id="partner-filter-reset">Reset</button>
+        <button id="partner-filter-reset" class="partnersQuery__input partnersQuery__input_reset" >Reset</button>
 
 
     </div>

@@ -64,6 +64,36 @@
         }
     }
 
+    &__input{
+
+        border: 1px solid transparentize($color: $blue, $amount: 0.6);
+        border-radius: 5px;
+        height: 48px;
+        width: 250px;
+        margin-right: 10px;
+        background: transparent;
+        cursor: pointer;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        &_reset{
+
+            width: auto;
+            padding-left: 35px;
+            padding-right: 35px;
+            border-color: transparent;
+            text-align: center;
+
+            &:hover{
+
+                border: 1px solid transparentize($color: $blue, $amount: 0.6);
+
+            }
+
+        }
+
+    }
+
 }
 
 @media screen and (max-width: $phoneWidthMax) {
@@ -87,7 +117,7 @@
         .container{
             padding: 0;
         }
-        
+
     }
 
 }

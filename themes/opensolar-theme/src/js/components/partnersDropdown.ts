@@ -44,7 +44,10 @@ $(partnersLiveSearch).on( 'input' , () => {
 
     for (let i = 0; i < products.length; i++) {
 
-        if( $(products[i]).attr('id').indexOf( liveSearchVal.toLowerCase() ) < 0 ){
+        const title = $(products[i]).find('h3')[0].textContent.toLowerCase();
+
+
+        if( title.indexOf( liveSearchVal.toLowerCase() ) < 0 ){
             $(products[i]).hide();
             $(products[i]).attr('showinlivesearch' , 'false')
         } else {
