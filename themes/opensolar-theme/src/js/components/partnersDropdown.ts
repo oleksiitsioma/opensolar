@@ -72,3 +72,35 @@ $(partnerfilterreset).on( 'click' , () => {
     $(partnersLiveSearch).val('')
 
 })
+
+
+// partners pagination
+
+const partnersperpage = 6;
+
+let showedPosts = partnersperpage;
+
+console.log( products.length );
+
+for (let i = showedPosts; i < products.length; i++) {
+    $(products[i]).hide();
+    
+}
+
+$(window).on( 'scroll' , () => {
+
+    if( $(window).scrollTop() > $(products[showedPosts - 1]).offset().top - $(window).height() ){
+
+        showedPosts < $(products).length - partnersperpage
+            ? showedPosts += partnersperpage
+            : showedPosts = $(products).length;
+
+        $(products).show();
+
+        for (let i = showedPosts; i < products.length; i++) {
+            $(products[i]).hide();   
+        }
+
+    }
+
+})
