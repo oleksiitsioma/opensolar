@@ -14,6 +14,50 @@ endwhile; endif;
 
 ?>
 
+<div class="partnersClickableBoard">
+
+    <?php
+    
+    $partnersQueryArgs = array(
+        'post_type'         => 'partners',
+        'posts_per_page'    => -1,
+    );
+
+    $partnersQuery = new WP_Query( $partnersQueryArgs );
+
+    if( $partnersQuery->have_posts()){ 
+
+    ?>
+
+        <div class="container colGr_8">
+
+            <?php
+                
+                while( $partnersQuery->have_posts()) : $partnersQuery->the_post(); ?>
+                
+                <div class="colGr__col_1">
+                    <a href="<?php echo '#' . _wp_to_kebab_case( strtolower( get_the_title() ) ) . '-' . get_the_ID();?>">
+                        <div class="partnersClickableBoard__logoWrapper">
+                            <?php
+                                the_post_thumbnail(
+                                    array(130, 300),
+                                    array(
+                                        'class' => 'partnersClickableBoard__logo'
+                                    )
+                                );
+                            ?>
+                        </div>
+                    </a>
+                </div>
+
+            <?php endwhile; ?> 
+    
+        </div>
+
+    <?php wp_reset_postdata(); } ?>
+
+</div>
+
 <div class="partnersQuery">
 
     <div class="partnersQuery__filter">
@@ -37,47 +81,52 @@ endwhile; endif;
 
         </select>
 
-        <input type="text" >
+        <input type="text" name="live-partner-search" id="live-partner-search">
+
+        <button id="partner-filter-reset">Reset</button>
 
 
     </div>
 
     <?php
-    
-    $partnersQueryArgs = array(
-        'post_type'         => 'partners',
-        'posts_per_page'    => -1
-    );
-
-    $partnersQuery = new WP_Query( $partnersQueryArgs );
 
     if( $partnersQuery->have_posts()) : while( $partnersQuery->have_posts()) : $partnersQuery->the_post();
 
     $regions = get_the_terms( get_the_ID() , 'partners-regions'); 
-    $products = get_the_terms( get_the_ID() , 'partners-products');
 
-    $regionsStripped = [];
+    if( $regions ){
 
-    foreach( $regions as $region ){
-        $regionsStripped[] = $region->name;
+        $regionsStripped = [];
+    
+        foreach( $regions as $region ){
+            $regionsStripped[] = $region->name;
+        }
+
     }
 
-    $productsStripped = [];
+    $products = get_the_terms( get_the_ID() , 'partners-products');
 
-    foreach( $products as $product ){
-        $productsStripped[] = $product->name;
+    if( $products ){
+
+    
+        $productsStripped = [];
+    
+        foreach( $products as $product ){
+            $productsStripped[] = $product->name;
+        }
+
     }
     
     ?>
 
         <div
             class="partnersQuery__item colGr"
-            id="<?php the_title(); ?>
+            id="<?php echo _wp_to_kebab_case( strtolower( get_the_title() ) ) . '-' . get_the_ID(); ?>"
             <?php
-                if ( sizeof( $regionsStripped ) > 0  ) {
+                if ( $regions ) {
                     echo 'data-regions="' . implode( ', ' , $regionsStripped ) . '"' ; 
                 } 
-                if ( sizeof( $productsStripped ) > 0  ) {
+                if ( $products ) {
                     echo 'data-products="' . implode( ', ' , $productsStripped ) . '"' ; 
                 } 
             ?>
@@ -96,13 +145,13 @@ endwhile; endif;
             </div>
             <div class="colGr__col_3 partnersQuery__itemMeta">
                 <div class="partnersQuery__itemMetaBlock">
-                    <?php if ( sizeof( $regionsStripped ) > 0  ) { ?>
+                    <?php if ( $regions ) { ?>
                         <p class="partnersQuery__itemText_big">Available in</p>
                         <p class="partnersQuery__itemText_small"><?php echo implode( ', ' , $regionsStripped ); ?></p>
                     <?php } ?>
                 </div>
                 <div class="partnersQuery__itemMetaBlock">
-                    <?php if ( sizeof( $productsStripped ) > 0  ) { ?>
+                    <?php if ( $products ) { ?>
                         <p class="partnersQuery__itemText_big">Products</p>
                         <p class="partnersQuery__itemText_small"><?php echo implode( ', ' , $productsStripped ); ?></p>
                     <?php } ?>
